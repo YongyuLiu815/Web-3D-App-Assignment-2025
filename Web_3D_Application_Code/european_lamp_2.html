@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Display - European Crystal Chandelier 2</title>
+    
+    <!-- Link to CSS styles -->
+    <link rel="stylesheet" href="styles/european_lamp_2.css">
+    
+    <!-- Importing Three.js and required modules -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "GLTFLoader": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js",
+                "OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header with title and back button -->
+    <header class="header">
+        <button id="backButton">Home</button>
+        <h1>3D Display - European Crystal Chandelier 2</h1>
+    </header>
+
+    <div class="container">
+        <!-- Left panel: 3D model display area -->
+        <div class="left-panel">
+            <div id="renderArea"></div>
+        </div>
+
+        <!-- Right panel: Information and controls -->
+        <div class="right-panel">
+            
+            <!-- Model description -->
+            <div class="description">
+                <h3>Model Introduction</h3>
+                <p>The European Crystal Chandelier embodies elegance and luxury, featuring a sophisticated blend of shimmering crystals and refined metallic accents. 
+                    Designed with intricate craftsmanship, its cascading crystal prisms refract light beautifully, creating a dazzling ambiance that enhances any space. 
+                    The chandelier's ornate frame, often crafted from polished brass, gold, or silver, complements its opulent aesthetic, making it a perfect statement piece for grand interiors. 
+                    Whether illuminating a luxurious dining hall, a classic hotel lobby, or an elegant living room, this chandelier exudes timeless charm and sophistication, seamlessly blending classic European artistry with modern lighting brilliance.</p>
+            </div>
+
+            <!-- Control panel for model interactions -->
+            <div class="controls">
+                <h3>Control Panel</h3>
+                <button id="rotateModel">Rotating</button>
+                <button id="toggleLight">Toggle Light</button>
+
+                <label>Light Intensity</label>
+                <input type="range" id="lightIntensity" min="0" max="5" step="0.1">
+
+                <label>Light Color</label>
+                <input type="color" id="lightColor" value="#ffffff">
+
+                <button id="toggleStructure">View Structure</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript file for 3D model functionality -->
+    <script type="module" src="scripts/european_lamp_2.js"></script>
+</body>
+</html>

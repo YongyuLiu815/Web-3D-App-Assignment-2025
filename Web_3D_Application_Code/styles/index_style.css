@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: black; /* Set background color to black */
+    color: white;
+    text-align: center;
+}
+
+/* Header (Logo) styles */
+header {
+    background-color: black;
+    padding: 10px 0;
+    border-bottom: 3px solid gold;
+}
+
+header .logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, gold, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2E3338; /* Dark gray background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Footer text */
+footer p {
+    margin-left: 20px;
+}
+
+/* Social media icon container */
+.social-icons {
+    margin-right: 20px;
+}
+
+/* Social media icons */
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for social media icons */
+.social-icons img:hover {
+    transform: scale(1.1) rotate(3deg);
+    filter: brightness(1.2);
+}

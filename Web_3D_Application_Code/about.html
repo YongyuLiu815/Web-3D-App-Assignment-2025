@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - 3D Luxe Lights</title>
+  
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles/about_style.css" />
+
+  <!-- JavaScript -->
+  <script defer src="scripts/about_script.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">3D Model Lights</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container-fluid">
+    <div class="section-content">
+      <h2>About</h2>
+      <p>This website is a personal project I created to showcase a selection of distinctive lamp models.
+
+        It features four 3D models in total—two traditional Chinese-style lanterns and two European-style crystal lamps.
+
+        Users can experience animated on/off effects and interactively switch lighting colors, highlighting the diversity and aesthetic charm of each design.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>3D Models</h2>
+      <p>To create this website, I designed four lamp models using Blender.
+
+        During the modeling process, I utilized UV editing and shading tools to enhance the visual appearance of each lamp.
+
+        I also applied lighting effects through the shading system, allowing the models to emit a soft glow in dark environments, creating a moody and atmospheric presentation.</p>
+        <div class="image-row">
+          <img src="assets/images/evidence of light made 2.png" alt="Chinese Lamp Model" class="about-img" onclick="openModal(this.src)"/>
+          <img src="assets/images/evidence of light made.png" alt="European Lamp Model" class="about-img" onclick="openModal(this.src)"/>
+        </div>        
+    </div>
+
+    <div class="section-content">
+      <h2>Design</h2>
+      <p>The design of this page is built using pure HTML, CSS, and Three.js without relying on external UI frameworks. A custom layout splits the screen into two sections: a 3D rendering area and a control panel.
+
+        The navigation and interface are fully hand-coded, providing greater flexibility for styling and responsiveness. The dark theme with golden accents aligns with the overall aesthetic of the site.
+        
+        Three.js is used to load and display the 3D lamp model. Lighting is set up using AmbientLight and DirectionalLight. Users can interactively rotate the model, toggle lights, adjust light intensity and color, and enable a wireframe view to examine its structure.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Integration</h2>
+      <p>On the homepage, I integrated preview images for each lamp model and used CSS to control their layout and size. Each image is clickable, allowing users to navigate directly to the corresponding 3D model display page.
+
+        In addition, the navigation bar also provides quick access to the same models through categorized dropdown links, ensuring a consistent and intuitive user experience.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Interaction</h2>
+      <p>I added interactive OrbitControls to allow users to rotate, zoom, and explore the 3D model freely within the web page.
+        
+        Additionally, I implemented control buttons that let users toggle rotation, adjust lighting, and switch between different model views or modes. 
+        
+        These interactions enhance engagement and give users more control over how the lamp is experienced.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Implementation</h2>
+      <p>The project has been successfully completed and deployed, and all the expected features (including model presentation, lighting control, rotation and interaction) work well in modern browsers.
+
+        During the development process, I encountered some challenges, such as how to adjust the lighting effects imported from Blender, how to maintain compatibility on different devices, and how to optimise the camera and controllers for smoother user operation.
+        
+        Through continuous testing and debugging, the system is now stable and responds well to user interactions.
+        
+        Initial user feedback is positive, especially in terms of visual aesthetics and lighting interaction, which enhances the realism and cultural expression of the model.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Deeper Understanding</h2>
+      <p>Beyond the technical implementation, this project gave me a deeper appreciation for how cultural artifacts can be translated into digital form.
+
+        By modeling traditional Chinese and European lamps, I reflected on how material, form, and light work together to create mood and identity. Recreating these effects digitally required not only 3D skills, but also sensitivity to cultural context and user experience.
+        
+        I also realized how interactive design can help users engage more deeply with virtual objects, turning passive viewing into active exploration. The project allowed me to combine technical learning with cultural storytelling.</p>
+    </div>
+
+    <div class="section-content">
+      <h2>Deployment & Publication</h2>
+      <p>The project has been fully implemented and is ready for deployment. All pages, 3D models, and interactive features are well-integrated and tested. The site is structured to run as a static web application, making it suitable for hosting on platforms such as GitHub Pages or Netlify.
+
+        This project will be included in my personal portfolio to showcase both technical and creative skills. It can also serve as a demo for interactive cultural experiences or 3D product showcases.
+        
+        Future plans include refining the UI/UX for mobile devices, expanding the collection of models, and integrating real-time lighting or animation libraries for more immersive interactions.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mobile Web Applications</p>
+    <div class="social-icons">
+      <a href="#"><img src="assets/icons/facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="assets/icons/twitter.png" alt="Twitter" /></a>
+      <a href="#"><img src="assets/icons/google.png" alt="Google" /></a>
+      <a href="#"><img src="assets/icons/github.png" alt="GitHub" /></a>
+    </div>
+  </footer>
+
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img class="modal-content" id="modalImg">
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

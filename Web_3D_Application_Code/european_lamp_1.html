@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Display - European Crystal Chandelier 1</title>
+    
+    <!-- Link to CSS styles -->
+    <link rel="stylesheet" href="styles/european_lamp_1.css">
+    
+    <!-- Importing Three.js and required modules -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "GLTFLoader": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js",
+                "OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header with title and back button -->
+    <header class="header">
+        <button id="backButton">Home</button>
+        <h1>3D Display - European Crystal Chandelier 1</h1>
+    </header>
+
+    <div class="container">
+        <!-- Left panel: 3D model display area -->
+        <div class="left-panel">
+            <div id="renderArea"></div>
+        </div>
+
+        <!-- Right panel: Information and controls -->
+        <div class="right-panel">
+            
+            <!-- Model description -->
+            <div class="description">
+                <h3>Model Introduction</h3>
+                <p>The European Crystal Chandelier is a masterpiece of elegance and sophistication, featuring a luxurious arrangement of sparkling crystals that beautifully refract light, casting a mesmerizing glow. 
+                    Its intricately designed metal frame, often finished in gold, silver, or antique bronze, enhances its regal charm. 
+                    This chandelier seamlessly blends classic European artistry with modern refinement, making it an exquisite centerpiece for grand dining rooms, luxurious hotel lobbies, or elegant living spaces. 
+                    With its timeless appeal and dazzling illumination, it not only enhances the ambiance but also adds a touch of opulence and grandeur to any interior setting.</p>
+            </div>
+
+            <!-- Control panel for model interactions -->
+            <div class="controls">
+                <h3>Control Panel</h3>
+                <button id="rotateModel">Rotating</button>
+                <button id="toggleLight">Toggle Light</button>
+
+                <label>Light Intensity</label>
+                <input type="range" id="lightIntensity" min="0" max="5" step="0.1">
+
+                <label>Light Color</label>
+                <input type="color" id="lightColor" value="#ffffff">
+
+                <button id="toggleStructure">View Structure</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript file for 3D model functionality -->
+    <script type="module" src="scripts/european_lamp_1.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 15px;
+    position: relative;
+    border-top: 3px solid gold;
+    border-bottom: 3px solid gold;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+/* Navigation link styles */
+.nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+/* Change text color on hover */
+.nav-links a:hover {
+    color: gold;
+}
+
+/* Dropdown menu container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 600px;
+    background: rgba(20, 20, 20, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+/* Show dropdown menu when hovered or toggled */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Dropdown menu content layout */
+.dropdown-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Dropdown menu titles */
+.dropdown-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gold;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/* Dropdown menu links */
+.dropdown-menu a {
+    display: block;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    text-align: center;
+}
+
+/* Change text color on hover */
+.dropdown-menu a:hover {
+    color: gold;
+}

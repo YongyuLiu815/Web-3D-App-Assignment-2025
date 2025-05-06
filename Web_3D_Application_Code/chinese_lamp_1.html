@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Display - Chinese Vintage Lantern 1</title>
+    <link rel="stylesheet" href="styles/chinese_lamp_1.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "GLTFLoader": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js",
+                "OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Top heading -->
+    <header class="header">
+        <button id="backButton">Home</button>
+        <h1>3D Display - Chinese Vintage Lantern 1</h1>
+    </header>
+
+    <!-- Page Layout -->
+    <div class="container">
+        <div class="left-panel">
+            <div id="renderArea"></div>
+        </div>
+        <div class="right-panel">
+            <div class="description">
+                <h2>Model Introduction</h2>
+                <p>The Chinese Vintage Hexagonal Palace Lantern blends traditional craftsmanship with classical aesthetics. Featuring a hexagonal frame symbolizing auspiciousness, it is crafted from premium materials such as rosewood, Xuan paper, or glazed glass, adorned with exquisite carvings and hand-painted designs that exude elegance and grandeur. 
+                    The semi-transparent lampshade diffuses a warm glow, creating a cozy and serene ambiance. 
+                    Suitable for Chinese-style homes, cultural spaces, and commercial settings, this lantern serves not only as a functional lighting fixture but also as a cultural artwork, showcasing the timeless beauty of Eastern traditions.</p>
+            </div>
+            <div class="controls">
+                <h3>control panel</h3>
+                <button id="toggleRotation">Rotating</button>
+                <button id="toggleLight">Toggle Light</button>
+                <label for="lightIntensity">Light Intensity</label>
+                <input type="range" id="lightIntensity" min="0" max="100" step="1" value="50">
+                <label for="lightColor">Light Color</label>
+                <input type="color" id="lightColor" value="#ffffff">
+                <button id="viewStructure">View Structure</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/chinese_lamp_1.js"></script>
+</body>
+</html>

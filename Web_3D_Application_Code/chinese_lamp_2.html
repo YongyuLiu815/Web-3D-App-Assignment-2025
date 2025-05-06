@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Display - Chinese Vintage Lantern 2</title>
+    <link rel="stylesheet" href="styles/chinese_lamp_2.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "GLTFLoader": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js",
+                "OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Top heading -->
+    <header class="header">
+        <button id="backButton">Home</button>
+        <h1>3D Display - Chinese Vintage Lantern 2</h1>
+    </header>
+
+    <!-- Page Layout -->
+    <div class="container">
+        <div class="left-panel">
+            <div id="renderArea"></div>
+        </div>
+        <div class="right-panel">
+            <div class="description">
+                <h2>Model Introduction</h2>
+                <p>The Chinese Vintage Palace Lantern embodies the essence of traditional craftsmanship and cultural heritage, featuring an elegant wooden frame with intricate carvings and delicate hand-painted patterns. 
+                    Its hexagonal or octagonal structure, often adorned with auspicious motifs such as dragons, phoenixes, or floral designs, symbolizes prosperity and harmony. 
+                    The lantern's translucent silk or rice paper panels emit a soft, warm glow, creating a serene and inviting ambiance. Perfect for classic interiors, tea houses, or cultural spaces, this exquisite lantern is not just a lighting fixture but a timeless expression of oriental artistry and refined elegance.</p>
+            </div>
+            <div class="controls">
+                <h3>control panel</h3>
+                <button id="toggleRotation">Rotating</button>
+                <button id="toggleLight">Toggle Light</button>
+                <label for="lightIntensity">Light Intensity</label>
+                <input type="range" id="lightIntensity" min="0" max="100" step="1" value="50">
+                <label for="lightColor">Light Color</label>
+                <input type="color" id="lightColor" value="#ffffff">
+                <button id="viewStructure">View Structure</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/chinese_lamp_2.js"></script>
+</body>
+</html>

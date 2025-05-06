@@ -1,0 +1,16 @@
+/* Let the banner height be reduced */
+.banner {
+    width: 100vw;
+    height: 300px;  
+    display: block;
+    background-color: black;
+    padding: 10px 0;
+    border-bottom: 3px solid gold;
+}
+
+/* Make banner images auto-fit */
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

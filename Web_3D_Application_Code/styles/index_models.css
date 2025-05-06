@@ -1,0 +1,38 @@
+/* 3D Model Preview Section */
+.models-preview {
+    display: flex;
+    justify-content: center; /* Center align model cards */
+    gap: 80px; /* Space between model cards */
+    margin: 50px 0; /* Add vertical margin */
+}
+
+/* 3D Model Card */
+.model-card {
+    width: 250px; 
+    height: 400px; 
+    background-color: #1e1e1e; /* Dark background for contrast */
+    color: white; 
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    cursor: pointer; /* Change cursor to indicate clickability */
+}
+
+/* Model image inside the card */
+.model-card img {
+    width: 100%; 
+    height: 70%; /* Take up 70% of card height */
+    object-fit: cover; /* Ensure the image fills the area properly */
+    cursor: pointer; 
+}
+
+/* Add bounce animation on hover */
+.model-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+}
